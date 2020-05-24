@@ -1,0 +1,9 @@
+INSERT INTO `sakila`.`task` (`task_id`, `description`, `status`, `creation_date`, `requester`, `last_update_date`) VALUES ('1', 'Build Web app for HRMS', 'Done', '2018-11-13', 'HR Dept', '2019-02-03');
+
+INSERT INTO `sakila`.`task` (`task_id`, `description`, `status`, `creation_date`, `requester`, `last_update_date`) VALUES ('2', 'Add new user to domain', 'Done', '2018-11-13', 'SCM Dept', '2019-02-03');
+
+INSERT INTO `sakila`.`task` (`task_id`, `description`, `status`, `creation_date`, `requester`, `last_update_date`) VALUES ('3', 'E-Mail space is full', 'Done', '2018-11-13', 'FIN Dept', '2019-02-03');
+
+INSERT INTO `sakila`.`task` (`task_id`, `description`, `status`, `creation_date`, `requester`, `last_update_date`) VALUES (
+'4', 'Employee Medical Card request', 'Pending', '2018-11-13', 'IT Dept', '2019-02-03'
+);

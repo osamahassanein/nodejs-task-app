@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `sakila`.`task` (
+  `task_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `description` varchar(200) DEFAULT NULL,
+  `status` varchar(30) DEFAULT NULL,
+  `creation_date` date DEFAULT NULL,
+  `requester` varchar(30) DEFAULT NULL,
+  `last_update_date` date DEFAULT NULL,
+ 
+  PRIMARY KEY (`task_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=126903 DEFAULT CHARSET=latin1;

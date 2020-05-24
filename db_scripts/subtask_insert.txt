@@ -1,0 +1,25 @@
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES ('1', '1', 'Analyze business', 'done', '2018-11-13', '2018-11-13');
+
+
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES (
+'2', '1', 'Choose DB server', 'done', '2018-11-13', '2018-11-13');
+
+
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES (
+'3', '1', 'Choose back-end technology', 'done', '2018-12-13', '2018-12-23');
+
+
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES (
+'4', '1', 'Choose front-end technology', 'done', '2018-12-13', '2018-12-23');
+
+
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES (
+'5', '1', 'Build App', 'not done', '2018-11-13', '2018-11-13');
+
+
+INSERT INTO `sakila`.`subtask` (`subtask_id`, `task_id`, `description`, `status`, `creation_date`, `last_update_date`) VALUES (
+'6', '1', 'Test App', 'not done', '2018-11-13', '2019-01-23');
+
+
+
+
