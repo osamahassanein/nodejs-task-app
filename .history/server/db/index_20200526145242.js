@@ -75,7 +75,7 @@ taskdb.createTask = (taskObj) => {
             )
             VALUES
             (
-                ?, ?, STR_TO_DATE(?,'%YYYY-%MM-%DD'), ?
+                ?, ?, ?, ?
             )`;
 
     pool.query(
@@ -90,7 +90,8 @@ taskdb.createTask = (taskObj) => {
         if (err) {
           return reject(err);
         }
-        return resolve(results);        
+        console.log("results >>>>" + JSON.stringify(results));
+        return resolve(results);
       }
     );
   });

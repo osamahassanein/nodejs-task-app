@@ -75,7 +75,7 @@ taskdb.createTask = (taskObj) => {
             )
             VALUES
             (
-                ?, ?, STR_TO_DATE(?,'%YYYY-%MM-%DD'), ?
+                ?, ?, ?, ?
             )`;
 
     pool.query(

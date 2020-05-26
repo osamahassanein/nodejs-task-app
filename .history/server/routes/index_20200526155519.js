@@ -51,10 +51,14 @@ router.post("/create-task", async (req, res, next) => {
     console.log("REQ is >>>" + JSON.stringify(req.body.status));
     console.log("REQ is >>>" + JSON.stringify(req.body));
     let task = await db.createTask(req.body);
-    res.json(task);
+    res.send(res);
+    // console.log('res.json(task) >>>' + JSON.stringify(res.json(task)) );
+    console.log('res.insertId >>>' + res.insertId );
+    //res.redirect("/api/tasks/" + res.insertId);
+    // res.render('api/tasks',{output: res.insertId});
   } catch (e) {
     console.log(e);
-    // res.sendStatus(500);
+    res.sendStatus(500);
   }
 });
 module.exports = router;
