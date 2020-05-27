@@ -63,8 +63,8 @@ router.post("/create-subtask", async (req, res, next) => {
     console.log("REQ is >>>" + req.path);
     console.log("REQ is >>>" + JSON.stringify(req.body.status));
     console.log("REQ is >>>" + JSON.stringify(req.body));
-    let subtask = await db.createSubtask(req.body);
-    res.json(subtask);
+    let task = await db.createSubtask(req.body);
+    res.json(task);
   } catch (e) {
     console.log(e);
     // res.sendStatus(500);

@@ -75,7 +75,7 @@ taskdb.createTask = (taskObj) => {
             )
             VALUES
             (
-                ?, ?, STR_TO_DATE(?,'%Y-%m-%d %h:%i:%s'), ?
+                ?, ?, STR_TO_DATE(?,'%Y-%m-%d'), ?
             )`;
 
     pool.query(
@@ -85,35 +85,6 @@ taskdb.createTask = (taskObj) => {
         taskObj.status,
         taskObj.creation_date,
         taskObj.requester,
-      ],
-      (err, results) => {
-        if (err) {
-          return reject(err);
-        }
-        return resolve(results);        
-      }
-    );
-  });
-};
-
-taskdb.createSubtask = (subtaskObj) => {
-  return new Promise((resolve, reject) => {
-    var sql = `INSERT INTO sakila.subtask 
-            (
-              task_id, description, status, creation_date
-            )
-            VALUES
-            (
-                ?, ?, ?, STR_TO_DATE(?,'%Y-%m-%d %h:%i:%s')
-            )`;
-
-    pool.query(
-      sql,
-      [
-        subtaskObj.task_id,
-        subtaskObj.description,
-        subtaskObj.status,
-        subtaskObj.creation_date,
       ],
       (err, results) => {
         if (err) {
