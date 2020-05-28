@@ -45,11 +45,9 @@ router.delete("/:id", async (req, res, next) => {
   }
 });
 
-router.put("/", async (req, res, next) => {
+router.updateTask("/:id", async (req, res, next) => {
   try {
-    console.log("REQ is >>>" + req.path);
-    let results = await db.updateTask(req.body);    
-    console.log(req.body);
+    let results = await db.updateTask(req.body);
     res.json(results);
   } catch (e) {
     console.log(e);

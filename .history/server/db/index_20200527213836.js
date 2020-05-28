@@ -67,20 +67,17 @@ taskdb.delete = (id) => {
   });
 };
 
-taskdb.updateTask = (taskObj) => {
+taskdb.updateTask = (task) => {
   return new Promise((resolve, reject) => {
-    var sql =
-      "UPDATE `task` SET `DESCRIPTION`=?,`REQUESTER`=?,`STATUS`=?,`LAST_UPDATE_DATE`=? where `TASK_ID`=?";
-
     pool.query(
-      sql,
-      [
-        taskObj.description,
-        taskObj.requester,
-        taskObj.status,
-        taskObj.last_update_date,
-        taskObj.task_id,
-      ],
+      "UPDATE sakila.task SET DESCRIPTION = " +
+        task.description +
+        "AND REQUESTER = " +
+        task.requester +
+        "AND STATUS = " +
+        task.status +
+        " WHERE TASK_ID =?",
+      task.task_id,
       (err, results) => {
         if (err) {
           return reject(err);

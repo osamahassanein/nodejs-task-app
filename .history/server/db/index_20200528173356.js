@@ -66,7 +66,30 @@ taskdb.delete = (id) => {
     );
   });
 };
-
+/*
+taskdb.updateTask = (task) => {
+  return new Promise((resolve, reject) => {
+    pool.query(
+      "UPDATE sakila.task SET DESCRIPTION = '" +
+        task.description +
+        "' AND REQUESTER = '" +
+        task.requester +
+        "' AND STATUS = '" +
+        task.status +
+        "' AND LAST_UPDATE_DATE = STR_TO_DATE('" +
+        task.last_update_date +
+        "','%Y-%m-%d %h:%i:%s') WHERE TASK_ID =?",
+      task.task_id,
+      (err, results) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve(results);
+      }
+    );
+  });
+};
+*/
 taskdb.updateTask = (taskObj) => {
   return new Promise((resolve, reject) => {
     var sql =
